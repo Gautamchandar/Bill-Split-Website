@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Bill Splitting </title>
+    <link rel="stylesheet" href="newexample1.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Bill Splitting </h1>
+        <form id="billForm">
+            <!-- Total Bill -->
+            <label for="totalBill">Total Bill Amount:</label>
+            <input type="number" id="totalBill" placeholder="Enter total bill amount" required>
+
+            <!-- Tip Amount -->
+            <label for="tip">Tip Percentage:</label>
+            <input type="number" id="tip" placeholder="Enter tip percentage (optional)">
+
+            <!-- Number of People -->
+            <label for="numberOfPeople">Number of People:</label>
+            <input type="number" id="numberOfPeople" placeholder="Enter number of people" required>
+
+            <!-- Names of Payers -->
+            <label for="names">Enter Names (Comma separated):</label>
+            <input type="text" id="names" placeholder="Enter names of people paying the bill">
+
+            <!-- Rounding Options -->
+            <label for="rounding">Round Up or Down:</label>
+            <select id="rounding">
+                <option value="none">None</option>
+                <option value="up">Round Up</option>
+                <option value="down">Round Down</option>
+            </select>
+
+            <!-- Currency Converter -->
+            <label for="currency">Convert to Currency:</label>
+            <select id="currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+            </select>
+
+            <!-- Submit and Reset Buttons -->
+                <div>
+                <button type="submit">Split Bill</button>
+                </div>
+                <br>
+                <div>
+                <button type="reset" >Reset</button>
+            </div>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result"></div>
+
+        <!-- Bill Summary Section -->
+        <div id="billSummary" class="hidden">
+            <h3>Bill Summary</h3>
+            <p id="totalWithTip"></p>
+            <p id="tipAmount"></p>
+        </div>
+
+        <!-- Payment Status Section -->
+        <div id="paymentStatus" class="hidden">
+            <h3>Payment Status</h3>
+            <ul id="paymentStatusList"></ul>
+        </div>
+    </div>
+
+    <script src="newexample2.js"></script>
+</body>
+</html>

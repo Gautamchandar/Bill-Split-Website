@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .feedback-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 3px solid #0b0b0b;
+            border-radius: 5px;
+            background-color: rgb(209, 224, 236);
+        }
+        .feedback-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .feedback-form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .feedback-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feedback-form">
+        <h1>Feedback Form</h1>
+        <form action="/submit-feedback" method="post">
+            <label for="user-experience">User Experience:</label>
+            <textarea id="user-experience" name="user_experience" rows="4" placeholder="How easy was it to use the website?"></textarea>
+            
+            <label for="functionality">Functionality:</label>
+            <textarea id="functionality" name="functionality" rows="4" placeholder="Did the bill-splitting feature work as expected?"></textarea>
+            
+            <label for="design">Design and Aesthetics:</label>
+            <textarea id="design" name="design" rows="4" placeholder="How would you rate the overall design of the website?"></textarea>
+            
+            <label for="performance">Performance:</label>
+            <textarea id="performance" name="performance" rows="4" placeholder="Did you experience any slowdowns or performance issues?"></textarea>
+            
+            <label for="suggestions">Suggestions:</label>
+            <textarea id="suggestions" name="suggestions" rows="4" placeholder="What features or improvements would you like to see?"></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</body>
+</html>
